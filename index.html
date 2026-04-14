@@ -863,7 +863,9 @@ window.addEventListener('scroll',()=>{
 });
 
 // LENIS
-const lenis=new Lenis({lerp:.075,smoothWheel:true});
+const lenis=new Lenis(
+{lerp:.075,smoothWheel:true, anchors: true,}
+);
 lenis.on('scroll',ScrollTrigger.update);
 gsap.ticker.add(t=>lenis.raf(t*1000));
 gsap.ticker.lagSmoothing(0);
